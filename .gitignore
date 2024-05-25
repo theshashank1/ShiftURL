@@ -1,3 +1,4 @@
 .logs/
 node_modules/
 ShiftURL/node_modules
+.bin/
