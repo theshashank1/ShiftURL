@@ -1,24 +1,24 @@
-const mongoose = require("mongoose")
+// ShiftURL/config/db.js
 
-const connectDB = async () =>{
-    try{
-        await mongoose.connect("mongodb://localhost:27017/shifturl")
-        console.log("Database is connected sucessfully")
-    }
-    catch(error){
+const mongoose = require("mongoose");
+
+const connectDB = async () => {
+    try {
+        // mongodb://localhost:27017/shashank
+        await mongoose.connect("mongodb://localhost:27017/shifturl");
+        console.log("Database is connected successfully");
+    } catch (error) {
         console.log(`There is an error found in connecting, ${error}`);
     }
-}
+};
 
-
-const disconnectDB = async () =>{
-    try{
-        await mongoose.disconnect()
+const disconnectDB = async () => {
+    try {
+        await mongoose.disconnect();
+        console.log("Database is disconnected successfully");
+    } catch (error) {
+        console.log(`There is an error found in disconnecting, ${error}`);
     }
-    catch(error){
-        console.log(`There is an error found in disconnecting , ${error}`)
-    }
-}
+};
 
-module.exports = { connectDB, disconnectDB }
-
+module.exports = { connectDB, disconnectDB };

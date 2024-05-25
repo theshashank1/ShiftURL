@@ -1,0 +1,16 @@
+POST /api/shorten
+Generate the shorten url for given Redirect url
+
+GET /api/:id
+Redirect to the original url via shorten url
+
+GET /api/analytics
+Redirect the information of timestamp and no.of clicks
+
+
+Client side
+
+POST /user/
+
+GET /
+Impliment a home page with 
