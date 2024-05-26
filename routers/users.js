@@ -54,10 +54,9 @@ userRouter.post("/login", async (req, res) => {
 
         console.log(user);
          
-        const sessionId = uuidv4()
+        // const sessionId = uuidv4()
 
-        setUser( sessionId, user )
-        res.cookie('uid', sessionId)
+        res.cookie("uid", setUser(user))
         res.redirect("/")
 
     }
